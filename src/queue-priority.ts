@@ -9,7 +9,7 @@ class Node {
 }
 export class PriorityQueue {
   private items: Node[] = []
-  public size: number
+  public size = 0
 
   enqueue (element, priority) {
     const el = new Node(element, priority)

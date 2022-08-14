@@ -10,6 +10,7 @@ class Node {
 class PriorityQueue {
     constructor() {
         this.items = [];
+        this.size = 0;
     }
     enqueue(element, priority) {
         const el = new Node(element, priority);

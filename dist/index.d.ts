@@ -1,10 +1,2 @@
-export default class Queue {
-    private head;
-    private tail;
-    size: any;
-    constructor();
-    enqueue(value: any): void;
-    dequeue(): any;
-    clear(): void;
-    [Symbol.iterator](): Generator<any, void, unknown>;
-}
+export { Queue } from './queue';
+export { PriorityQueue } from './queue-priority';

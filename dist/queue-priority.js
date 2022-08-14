@@ -24,8 +24,10 @@ class PriorityQueue {
         if (!contain) {
             this.items.push(el);
         }
+        this.size++;
     }
     dequeue() {
+        this.size--;
         return this.items.shift().value;
     }
     front() {
@@ -33,6 +35,10 @@ class PriorityQueue {
     }
     back() {
         return this.items[this.items.length - 1];
+    }
+    clear() {
+        this.items = [];
+        this.size = 0;
     }
 }
 exports.PriorityQueue = PriorityQueue;

@@ -5,9 +5,11 @@ declare class Node {
 }
 export declare class PriorityQueue {
     private items;
+    size: number;
     enqueue(element: any, priority: any): void;
     dequeue(): any;
     front(): Node;
     back(): Node;
+    clear(): void;
 }
 export {};

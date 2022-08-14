@@ -1,7 +1,7 @@
 export declare class Queue {
     private head;
     private tail;
-    size: any;
+    size: number;
     constructor();
     enqueue(value: any): void;
     dequeue(): any;

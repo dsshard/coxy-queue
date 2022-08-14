@@ -8,6 +8,7 @@ class Node {
 }
 class Queue {
     constructor() {
+        this.size = 0;
         this.clear();
     }
     enqueue(value) {

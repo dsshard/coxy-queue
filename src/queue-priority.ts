@@ -9,6 +9,7 @@ class Node {
 }
 export class PriorityQueue {
   private items: Node[] = []
+  public size: number
 
   enqueue (element, priority) {
     const el = new Node(element, priority)
@@ -25,9 +26,12 @@ export class PriorityQueue {
     if (!contain) {
       this.items.push(el)
     }
+
+    this.size++
   }
 
   dequeue () {
+    this.size--
     return this.items.shift().value
   }
 
@@ -37,5 +41,10 @@ export class PriorityQueue {
 
   back () {
     return this.items[this.items.length - 1]
+  }
+
+  clear () {
+    this.items = []
+    this.size = 0
   }
 }

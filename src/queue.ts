@@ -10,7 +10,7 @@ class Node {
 export class Queue {
   private head;
   private tail;
-  public size;
+  public size = 0;
 
   constructor () {
     this.clear()

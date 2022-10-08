@@ -7,6 +7,7 @@ class Node {
     this.priority = priority
   }
 }
+
 export class PriorityQueue {
   private items: Node[] = []
   public size = 0

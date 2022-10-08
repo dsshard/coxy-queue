@@ -1,6 +1,6 @@
 class Node {
-  public value;
-  public next;
+  public value
+  public next
 
   constructor (value) {
     this.value = value
@@ -8,9 +8,9 @@ class Node {
 }
 
 export class Queue {
-  private head;
-  private tail;
-  public size = 0;
+  private head
+  private tail
+  public size = 0
 
   constructor () {
     this.clear()

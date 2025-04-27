@@ -1,7 +1,2 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.PriorityQueue = exports.Queue = void 0;
-var queue_1 = require("./queue");
-Object.defineProperty(exports, "Queue", { enumerable: true, get: function () { return queue_1.Queue; } });
-var queue_priority_1 = require("./queue-priority");
-Object.defineProperty(exports, "PriorityQueue", { enumerable: true, get: function () { return queue_priority_1.PriorityQueue; } });
+var a=Object.defineProperty;var o=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var d=Object.prototype.hasOwnProperty;var m=(i,e)=>{for(var t in e)a(i,t,{get:e[t],enumerable:!0})},f=(i,e,t,r)=>{if(e&&typeof e=="object"||typeof e=="function")for(let s of p(e))!d.call(i,s)&&s!==t&&a(i,s,{get:()=>e[s],enumerable:!(r=o(e,s))||r.enumerable});return i};var b=i=>f(a({},"__esModule",{value:!0}),i);var v={};m(v,{PriorityQueue:()=>u,Queue:()=>l});module.exports=b(v);var n=class{constructor(e){this.value=e}},l=class{constructor(){this.size=0;this.clear()}enqueue(e){let t=new n(e);this.head?(this.tail.next=t,this.tail=t):(this.head=t,this.tail=t),this.size++}dequeue(){let e=this.head;if(e)return this.head=this.head.next,this.size--,e.value}clear(){this.head=void 0,this.tail=void 0,this.size=0}*[Symbol.iterator](){let e=this.head;for(;e;)yield e.value,e=e.next}};var c=class{constructor(e,t){this.value=e,this.priority=t}},u=class{constructor(){this.items=[];this.size=0}enqueue(e,t){let r=new c(e,t),s=!1;for(let h=0;h<this.items.length;h++)if(this.items[h].priority>r.priority){this.items.splice(h,0,r),s=!0;break}s||this.items.push(r),this.size++}dequeue(){return this.size--,this.items.shift().value}front(){return this.items[0]}back(){return this.items[this.items.length-1]}clear(){this.items=[],this.size=0}};0&&(module.exports={PriorityQueue,Queue});
+//# sourceMappingURL=index.js.map

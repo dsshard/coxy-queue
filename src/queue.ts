@@ -1,8 +1,9 @@
+// queue.ts
 class Node {
   public value
   public next
 
-  constructor (value) {
+  constructor(value) {
     this.value = value
   }
 }
@@ -12,11 +13,11 @@ export class Queue {
   private tail
   public size = 0
 
-  constructor () {
+  constructor() {
     this.clear()
   }
 
-  enqueue (value) {
+  enqueue(value) {
     const node = new Node(value)
 
     if (this.head) {
@@ -30,7 +31,7 @@ export class Queue {
     this.size++
   }
 
-  dequeue () {
+  dequeue() {
     const current = this.head
     if (!current) {
       return
@@ -41,13 +42,13 @@ export class Queue {
     return current.value
   }
 
-  clear () {
+  clear() {
     this.head = undefined
     this.tail = undefined
     this.size = 0
   }
 
-  * [Symbol.iterator] () {
+  *[Symbol.iterator]() {
     let current = this.head
 
     while (current) {

@@ -1,8 +1,9 @@
+// queue-priority.ts
 class Node {
   public value
   public priority: number
 
-  constructor (element, priority) {
+  constructor(element, priority) {
     this.value = element
     this.priority = priority
   }
@@ -12,7 +13,7 @@ export class PriorityQueue {
   private items: Node[] = []
   public size = 0
 
-  enqueue (element, priority) {
+  enqueue(element, priority) {
     const el = new Node(element, priority)
     let contain = false
 
@@ -31,20 +32,20 @@ export class PriorityQueue {
     this.size++
   }
 
-  dequeue () {
+  dequeue() {
     this.size--
     return this.items.shift().value
   }
 
-  front () {
+  front() {
     return this.items[0]
   }
 
-  back () {
+  back() {
     return this.items[this.items.length - 1]
   }
 
-  clear () {
+  clear() {
     this.items = []
     this.size = 0
   }
